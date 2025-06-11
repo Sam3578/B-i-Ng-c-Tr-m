@@ -1,0 +1,21 @@
+import streamlit as st
+
+st.set_page_config(page_title="Lời nhắn bí mật 💌", page_icon="💖")
+st.title("💖 Nhập số để nhận lời nhắn bí mật 💖")
+
+loi_nhan = {
+    1: "Chúc bạn một ngày thật tươi đẹp 🌞",
+    2: "Bạn thật tuyệt vời, đừng quên điều đó nhé! 💖",
+    3: "Mọi chuyện rồi sẽ ổn thôi, cố lên! 💪",
+    4: "Bạn là ánh sáng trong ngày của ai đó đó 🌟",
+    5: "Hãy mỉm cười, vì nụ cười của bạn rất đẹp 😄",
+    6: "Tự tin lên, bạn làm được mà! ✨",
+    7: "Bạn không đơn độc đâu, có mình ở đây nè 💌",
+    8: "Hôm nay bạn đã cố gắng rất nhiều rồi, tự hào về bạn lắm 🥹",
+    9: "Gửi một cái ôm ảo đến bạn 🤗",
+    10: "Bạn xứng đáng được yêu thương, luôn luôn là thế 💗"
+}
+
+so = st.number_input("Nhập số từ 1 đến 10:", min_value=1, max_value=10, step=1)
+if st.button("Gửi lời nhắn 💌"):
+    st.success(loi_nhan.get(so))
